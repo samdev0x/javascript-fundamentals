@@ -1,27 +1,36 @@
-// Implement a List with push, pop and peek functions.
+// Create a List with push, pop, peek, including guardrails for empty cases
+
 let array = [];
 
 function main() {
-    console.log(push(1));
-    console.log(push(2));
-    console.log(push(3));
-    console.log(pop());
-    console.log(pop());
+    push(1);
+    push(2);
+    push(3);
+    console.log(array);
+    pop();
+    console.log(array);
     console.log(peek());
+    console.log(inspect());
+    pop();
+    console.log(inspect());
 }
-// push a value into the array into the last position
-function push(x) {
-    array.push(x)
-    return [...array];
+
+function push(value) {
+    array.push(value);
 }
-// remove the last value of the array
+
 function pop() {
-    array.pop()
-    return [...array];
+    if (array.length === 0) return null;
+    return array.pop();
 }
-// just return the last value of the array
+
 function peek() {
+    if (array.length === 0) return null;
     return array[array.length - 1];
 }
-    
+
+function inspect() {
+    return [...array];
+}
+
 main();
