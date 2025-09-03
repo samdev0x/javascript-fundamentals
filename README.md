@@ -48,5 +48,22 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Learned the critical difference between: 
   - **return for values** vs. **return for exit flow**  
   - when to **exit early** (search) vs. when to **finish the loop** (collect all).  
-- This was a breakthrough: once I understood how updating a value is just **reassignment**, I could reuse the loop/search pattern for `get`, `remove`, `has`, `keys`, and `values` much faster.  
-- End result: a clean, working hashmap implementation in `hashmap_pairs.js`.
+  - This was a breakthrough: once I understood how updating a value is just **reassignment**, I could reuse the loop/search pattern for `get`, `remove`, `has`, `keys`, and `values` much faster.  
+- File: `Section1_Fundamentals/hashmap_pairs.js`
+
+**Day 4**
+- Rebuilt the hashmap as an **OOP class**: `PairsMap`, internally storing an array of `[key, value]` pairs.
+- Public API:
+  - `set(key, value)` → add or update (no return value)
+  - `get(key)` → value or `null` if missing
+  - `remove(key)` → returns the **removed pair** `[key, value]` (or `null` if not found)
+  - `has(key)` → boolean
+  - `keys()` → array of keys
+  - `values()` → array of values
+  - `size()` → number of pairs
+  - `inspect()` → shallow copy snapshot of the internal array
+- Key lessons reinforced:
+  - **Assignment vs push:** update with `=`, add with `.push([key, value])`
+  - **Early exit in searches:** `return` after update/find; fallthrough logic after loops
+  - **`splice(i, 1)`** to remove a specific pair.
+- File: `Section1_Fundamentals/hashmap_pairs_oop.js`
