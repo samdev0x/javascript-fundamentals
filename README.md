@@ -67,3 +67,18 @@ This method has worked well so far — I notice clear improvements and faster pr
   - **Early exit in searches:** `return` after update/find; fallthrough logic after loops
   - **`splice(i, 1)`** to remove a specific pair.
 - File: `Section1_Fundamentals/hashmap_pairs_oop.js`
+
+**Day 5**
+- Implemented a **Singly Linked List** (functional style).
+- What I understood:
+  - The **conceptual model** makes sense: a list starts at `head`, each node has `value | next`, and the last node’s `next` is `null`.
+  - I can visualize traversals like `head.next`, `head.next.next`, and `head.value`.
+  - I see that operations like `find` are basically a **linear search**.
+  - I understand the pros/cons: cheap inserts/removals compared to arrays, but slow lookups.
+- What felt unclear:
+  - The overall **code structure** threw me off.  
+  - The dual use of `list` and `node` objects was confusing — especially how functions mix them (e.g. `list.head.value`).  
+  - Writing functions still felt like **guesswork**; I needed multiple corrections and several hours to make them work.
+- Functions completed:
+  - `createList`, `append`, `prepend`, `find`, `remove`, `size`, `toArray`.
+- File: `Section1_Fundamentals/linked_list.js`
