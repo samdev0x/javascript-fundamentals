@@ -10,7 +10,7 @@ function main() {
     append(list, "c");
     console.log(find(list, "c"));
     console.log(remove(list, "c"));
-    console.log(size(list));
+    console.log(list.size);
     console.log(toArray(list));
 }
 
@@ -21,7 +21,7 @@ function createList() {
     };
     return list;
 }
-
+    
 function append(list, value) {
     const node = {
         value: value,
@@ -90,10 +90,6 @@ function remove(list, value) {
         current = current.next;
     }
     return null;
-}
-
-function size(list) {
-    return list.size;
 }
 
 function toArray(list) {
