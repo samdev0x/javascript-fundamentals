@@ -85,7 +85,6 @@ This method has worked well so far — I notice clear improvements and faster pr
   - Structure felt like guesswork, needed multiple corrections.  
 - File: `Section1_Fundamentals/linked_list.js`
 </details>
-
 <details>
   <summary><strong>Day 6 — Singly Linked List (OOP) + cleanup</strong></summary>
 
@@ -103,4 +102,22 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Files:  
   - `Section1_Fundamentals/linked_list.js` (refactored functional)  
   - `Section1_Fundamentals/linked_list_oop.js` (OOP version)
+</details>
+
+<details>
+  <summary><strong>Day 7 — Set (Functional + OOP)</strong></summary>
+
+- Warmed up with a counter factory to learn closures and returning an API object.  
+- Built a **Set (functional)** with: `add`, `remove`, `has`, `size`, `values`.  
+- Rebuilt as **OOP `SetX` class** with the same API.  
+- Key lessons:  
+  - Factory → must return methods explicitly.  
+  - Class → instance already exposes methods.  
+  - Shorthand `{ add, remove }` works when names match; use `key: value` for aliasing.  
+  - Private state via closure (functional) vs `this` or `#field` (OOP).
+
+- Files:  
+  - `Section1_Fundamentals/set_counter.js`  
+  - `Section1_Fundamentals/set.js`  
+  - `Section1_Fundamentals/set_oop.js`
 </details>
