@@ -31,7 +31,15 @@ This method has worked well so far — I notice clear improvements and faster pr
 
 ## Progress Log
 
-### Section 1 – Fundamentals
+### Core Basics
+
+<details>
+  <summary><strong>Day 1 — Values vs References</strong></summary>
+
+  
+</details>
+
+### Data Structures
 
 <details>
   <summary><strong>Day 1 — Stack & Queue (functional)</strong></summary>
