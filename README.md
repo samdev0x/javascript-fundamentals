@@ -36,7 +36,33 @@ This method has worked well so far — I notice clear improvements and faster pr
 <details>
   <summary><strong>Day 1 — Values vs References</strong></summary>
 
-  
+- **Values vs References:**
+  - Primitives are copied **by value** (independent copies).
+  - Objects/arrays/functions are assigned by **reference** (aliases).
+  - `const` prevents reassignment but does not make objects immutable.
+
+- **Variables & Scope:**
+  - Function scope: variables declared inside a function are not accessible outside.
+  - Block scope (`let`/`const`) vs function scope (`var`).
+  - Lexical scope: inner functions can access variables from outer functions (closures).
+
+- **Mutation vs Reassignment:**
+  - Arrays: mutating  (push) affects aliases, reassigning creates a new array.
+  - Objects: shallow copy vs alias; nested references remain shared.
+  - Strings: immutable; `s1 += "!"` creates a new string (reassignment).
+  - Functions: closures preserve state, references can alias the same closue.
+
+- **Key lessons:**  
+  - **Primitives:** assignment makes a copy, reassignment creates a new value. 
+  - **Objects/arrays:** assignment makes an alias, mutations affect all references. 
+  - **Scope:** `let` and `const` are block scoped, `var` leaks to function scope.
+  - **Closures:** inner functions remember outer variales even after the outer function ends.
+  - **Shallow vs Deep copy:** spread (...) clones only the outer structure, nested references are shared.
+
+- Files:  
+  - `core_basics/primitive.js`  
+  - `core_basics/scope.js`  
+  - `core_basics/mutation.js`
 </details>
 
 ### Data Structures
@@ -55,10 +81,10 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Added an `inspect()` function to return snapshots of the array safely.  
 - Translated both Stack and Queue into **OOP (class-based) versions** with clean encapsulation and null guards.  
 - Files:  
-  - `Section1_Fundamentals/stack.js`  
-  - `Section1_Fundamentals/queue.js`  
-  - `Section1_Fundamentals/stack_oop.js`  
-  - `Section1_Fundamentals/queue_oop.js`
+  - `data_structures/stack.js`  
+  - `data_structures/queue.js`  
+  - `data_structures/stack_oop.js`  
+  - `data_structures/queue_oop.js`
 </details>
 
 <details>
@@ -68,7 +94,7 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Successfully implemented a minimal functional hashmap with features:  
   - `createMap()`, `set`, `get`, `remove`, `has`, `keys`, `values`  
 - Key lesson: update via **assignment** vs. add via **push**, early exit on search vs. complete traversal to collect.  
-- File: `Section1_Fundamentals/hashmap_pairs.js`
+- File: `data_structures/hashmap_pairs.js`
 </details>
 
 <details>
@@ -77,7 +103,7 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Rebuilt the hashmap as an **OOP class**: `PairsMap`, internally storing `[key, value]` pairs.  
 - API: `set`, `get`, `remove`, `has`, `keys`, `values`, `size`, `inspect`.  
 - Reinforced lessons: assignment vs push, early exit, and `splice(i, 1)` for removal.  
-- File: `Section1_Fundamentals/hashmap_pairs_oop.js`
+- File: `data_structures/hashmap_pairs_oop.js`
 </details>
 
 <details>
@@ -91,8 +117,9 @@ This method has worked well so far — I notice clear improvements and faster pr
 - Struggled with:  
   - Naming confusion (`list` vs `node`).  
   - Structure felt like guesswork, needed multiple corrections.  
-- File: `Section1_Fundamentals/linked_list.js`
+- File: `data_structures/linked_list.js`
 </details>
+
 <details>
   <summary><strong>Day 6 — Singly Linked List (OOP) + cleanup</strong></summary>
 
@@ -103,13 +130,13 @@ This method has worked well so far — I notice clear improvements and faster pr
   - `find(value)` → return node or `null`  
   - `remove(value)` → unlink first match, return node or `null`  
   - `toArray()` → return values as plain array  
-- Lessons:  
+- Key lessons:  
   - **Properties vs methods:** use `size` as property (like `arr.length`, `map.size`).  
   - **Append vs prepend:** append needs empty-list branch, prepend always “new head points to old head.”  
   - **Remove:** must track `previous` + `current` pointers.  
 - Files:  
-  - `Section1_Fundamentals/linked_list.js` (refactored functional)  
-  - `Section1_Fundamentals/linked_list_oop.js` (OOP version)
+  - `data_structures/linked_list.js` (refactored functional)  
+  - `data_structures/linked_list_oop.js` (OOP version)
 </details>
 
 <details>
@@ -125,7 +152,7 @@ This method has worked well so far — I notice clear improvements and faster pr
   - Private state via closure (functional) vs `this` or `#field` (OOP).
 
 - Files:  
-  - `Section1_Fundamentals/set_counter.js`  
-  - `Section1_Fundamentals/set.js`  
-  - `Section1_Fundamentals/set_oop.js`
+  - `data_structures/set_counter.js`  
+  - `data_structures/set.js`  
+  - `data_structures/set_oop.js`
 </details>
