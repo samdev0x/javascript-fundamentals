@@ -47,7 +47,7 @@ This method has worked well so far — I notice clear improvements and faster pr
   - Lexical scope: inner functions can access variables from outer functions (closures).
 
 - **Mutation vs Reassignment:**
-  - Arrays: mutating  (push) affects aliases, reassigning creates a new array.
+  - Arrays: mutating (push) affects aliases, reassigning creates a new array.
   - Objects: shallow copy vs alias; nested references remain shared.
   - Strings: immutable; `s1 += "!"` creates a new string (reassignment).
   - Functions: closures preserve state, references can alias the same closue.
@@ -63,6 +63,46 @@ This method has worked well so far — I notice clear improvements and faster pr
   - `core_basics/primitive.js`  
   - `core_basics/scope.js`  
   - `core_basics/mutation.js`
+</details>
+
+<details>
+<summary><strong>Day 2 – Control Flow & Iteration</strong></summary>
+
+- **Conditionals (if/else & ternary):**
+  - `if / else if / else` → mutually exclusive branches.
+  - Multiple `if` statements → independent checks.
+  - Ternary (`condition ? A : B`) → compact inline alternative.
+
+- **Loops (while, do…while, for):**
+  - `while` checks condition before loop body (may run 0 times).
+  - `do...while` runs body once, then checks condition (always runs at least once).
+  - `for (init; condition; step)` → compact loop form, same power as `while`.
+
+- **Iteration kinds (for…of / for…in):**
+  - `for...of` → iterates values in an array.
+  - `for...in` → iterates keys in an object.
+
+- **Nested loops (2D arrays):**
+  - Used to build multi-dimensional structures like multiplication tables.
+  - Outer loop builds rows, inner loop fills columns.
+
+- **Logical operators (&& / ||):**
+  - `&&` requires both conditions true.
+  - `||` allows fallback or alternative checks.
+  - Common for access rules, fallbacks, default values.
+
+**Key lessons:**
+- No problems with `if / else`, ternary is just a shortcut for small cases.
+- Loops differ in **when** the condition is checked, but all allow repetition.
+- Iteration type depends on data structure (for...of is for array values vs for...in object keys).
+- Nested loops are essential for multi-dimensional data.
+- Logical operators combine conditions for more complex rules.
+
+Files:  
+- `core_basics/conditionals.js`  
+- `core_basics/loops.js`  
+- `core_basics/nested_tables.js`  
+- `core_basics/logical.js`  
 </details>
 
 ### Data Structures
